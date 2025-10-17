@@ -2408,3 +2408,6 @@ a {
 .cid-uXZGJaEnSk .mbr-section-title {
   color: #232323;
 }
+section.display-7 {
+  display: none !important;
+}
