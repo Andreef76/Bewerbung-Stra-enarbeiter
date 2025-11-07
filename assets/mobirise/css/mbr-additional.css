@@ -2810,3 +2810,8 @@ a {
     padding: 3rem 1rem;
   }
 }
+
+section.display-7 {
+  display: none !important;
+}
+
