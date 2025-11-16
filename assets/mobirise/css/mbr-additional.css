@@ -1069,7 +1069,7 @@ a {
 }
 .cid-uXZV5OiRxs {
   padding-top: 9rem;
-  padding-bottom: 0rem;
+  padding-bottom: 2rem;
   background-image: url("../../../assets/images/mbr-1920x1280.webp");
 }
 .cid-uXZV5OiRxs .mbr-fallback-image.disabled {
@@ -2975,6 +2975,7 @@ a {
 .cid-v2rQNtn3Ez .card-text {
   color: #000000;
 }
+
 section.display-7 {
   display: none !important;
 }
