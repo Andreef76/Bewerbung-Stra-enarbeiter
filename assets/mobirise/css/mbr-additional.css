@@ -2479,14 +2479,6 @@ a {
   margin-bottom: 2rem;
   position: relative;
 }
-.cid-uXZGJaEnSk .row {
-  margin-left: 0;
-  margin-right: 0;
-}
-.cid-uXZGJaEnSk .item {
-  padding: 0;
-  margin: 0;
-}
 .cid-uXZGJaEnSk .item-wrapper {
   position: unset;
   border-radius: 4px;
@@ -2975,7 +2967,6 @@ a {
 .cid-v2rQNtn3Ez .card-text {
   color: #000000;
 }
-
 section.display-7 {
   display: none !important;
 }
