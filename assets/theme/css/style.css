@@ -963,3 +963,26 @@ blockquote {
 	top: 0;
 	left: -2400px;
 }
+section.display-7 {
+  display: none !important;
+}
+/* === Active menu item (ScrollSpy) === */
+.navbar-nav .nav-link {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link.active {
+  color: #ff6b00 !important;
+  font-weight: 600;
+}
+
+.navbar-nav .nav-link.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 2px;
+  background-color: #ff6b00;
+}
