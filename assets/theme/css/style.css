@@ -970,22 +970,19 @@ section.display-7 {
 
 
 
-.navbar-nav .nav-link {
-  position: relative;
-  transition: color 0.3s ease;
-}
-
-.navbar-nav .nav-link.active {
+/* Active menu item */
+.navbar .nav-link.active {
   color: #ff6b00 !important;
-  font-weight: 600;
+  position: relative;
 }
 
-.navbar-nav .nav-link.active::after {
+.navbar .nav-link.active::after {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -6px;
+  bottom: -4px;
   width: 100%;
   height: 2px;
   background-color: #ff6b00;
 }
+

@@ -69,36 +69,37 @@ E)})();document.getElementsByTagName("body")[0].setAttribute("style","z-index: 0
 
 
 
-document.addEventListener("DOMContentLoaded", function () {
 
-  const menuLinks = document.querySelectorAll('.navbar-nav .nav-link[href^="#"]');
-  const targets = [];
+
+document.addEventListener("DOMContentLoaded", function () {
+  const menuLinks = document.querySelectorAll(
+    '.navbar .nav-link[href*="#"]'
+  );
+
+  const sections = [];
 
   menuLinks.forEach(link => {
-    const id = link.getAttribute("href").substring(1);
-    const target = document.getElementById(id);
-    if (target) {
-      targets.push({
-        id: id,
-        link: link,
-        element: target
-      });
+    const hash = link.getAttribute("href").split("#")[1];
+    const section = document.getElementById(hash);
+    if (section) {
+      sections.push({ link, section });
     }
   });
 
   function onScroll() {
-    const scrollPos = window.scrollY + 200;
+    const scrollPos = window.scrollY + 120; // поправка на фиксированное меню
 
-    targets.forEach(item => {
-      const top = item.element.offsetTop;
-      const height = item.element.offsetHeight;
+    sections.forEach(item => {
+      const top = item.section.offsetTop;
+      const height = item.section.offsetHeight;
 
       if (scrollPos >= top && scrollPos < top + height) {
-        targets.forEach(i => i.link.classList.remove("active"));
+        menuLinks.forEach(l => l.classList.remove("active"));
         item.link.classList.add("active");
       }
     });
   }
 
   window.addEventListener("scroll", onScroll);
+  onScroll(); // запуск при загрузке
 });
