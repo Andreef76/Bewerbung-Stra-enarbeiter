@@ -756,7 +756,8 @@
               "text-align": "justify"
             },
             ".mbr-text, .mbr-section-btn": {
-              "text-align": "justify"
+              "text-align": "justify",
+              "color": "#a6a99c"
             },
             ".mbr-section-subtitle": {
               "text-align": "justify"

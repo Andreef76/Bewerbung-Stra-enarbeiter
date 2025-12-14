@@ -964,11 +964,12 @@ blockquote {
 	left: -2400px;
 }
 
+
+
+
 section.display-7 {
   display: none !important;
 }
-
-
 
 /* Active menu item */
 .navbar .nav-link.active {
@@ -985,4 +986,3 @@ section.display-7 {
   height: 2px;
   background-color: #ff6b00;
 }
-
