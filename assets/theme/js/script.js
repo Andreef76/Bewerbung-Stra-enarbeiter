@@ -65,33 +65,40 @@ datepicker:!1})}))})}document.querySelectorAll('input[type="range"]').forEach(fu
 else document.querySelectorAll(".pie_progress").length&&("undefined"!==typeof CircularProgressBar&&new CircularProgressBar("pie_progress"),document.querySelectorAll(".pie_progress").forEach(function(a){C(a)}));if(n&&t)f(document).on("add.cards",function(a){f(a.target).hasClass("testimonials-slider")&&x(a.target)}).on("changeParameter.cards",function(a,b,d){"testimonialsSlides"===b&&0==f(a.target).find(".carousel-item.active").length&&A(a.target)});else"undefined"===typeof window.initTestimonialsPlugin&&
 (window.initTestimonialsPlugin=!0,document.querySelectorAll(".testimonials-slider").forEach(function(a){x(a)}));l(function(){n||Array.from(document.body.children).filter(function(a){return!a.matches("style, script")}).forEach(function(a){if(window.Event&&"function"===typeof window.Event)var b=new Event("add.cards");else b=document.createEvent("CustomEvent"),b.initEvent("add.cards",!0,!0);a.dispatchEvent(b)})});l(function(){var a=!0,b=function(){var b=document.querySelector(".navbar-dropdown");if(b&&
 !b.classList.contains("opacityScrollOff")){var c=1<document.documentElement.scrollTop;if(c!==a||b.classList.contains("opacityScroll")){var d=document.querySelector(".navbar-collapse");a=c;b.classList.toggle("opacityScroll",!c);d&&d.classList.toggle("opacityScroll",!c)}}};b();window.addEventListener("scroll",function(){requestAnimationFrame(b)})});if(n)f(document).on("add.cards",D);else window.addEventListener("DOMContentLoaded",D);if(n)f(document).on("add.cards",E);else window.addEventListener("DOMContentLoaded",
-E)})();document.getElementsByTagName("body")[0].setAttribute("style","z-index: 0");!function(){try{document.getElementsById("top-1")[0].getElementsByTagName("a")[0].removeAttribute("rel")}catch(b){}if(!document.getElementById("top-1")){var a=document.createElement("section");a.id="top-1";a.style="display: none";a.innerHTML='<a href="https://mobirise.com/builder/ai-website-maker.html">AI Website Maker</a> Mobirise v6.1.9 <a href="https://mobirise.com/how-to/small-business.html">How to Create Website for Small Business</a>';document.body.insertBefore(a,document.body.childNodes[0])}}();
+E)})();document.getElementsByTagName("body")[0].setAttribute("style","z-index: 0");!function(){try{document.getElementsById("top-1")[0].getElementsByTagName("a")[0].removeAttribute("rel")}catch(b){}if(!document.getElementById("top-1")){var a=document.createElement("section");a.id="top-1";a.style="display: none";a.innerHTML='<a href="https://mobirise.com/builder/ai-website-builder.html">AI Website Builder</a> Mobirise v6.1.9 <a href="https://mobirise.com/html-builder.html">HTML Website Builder</a>';document.body.insertBefore(a,document.body.childNodes[0])}}();
+
+
+
 document.addEventListener("DOMContentLoaded", function () {
 
-  const sections = document.querySelectorAll("section[id]");
-  const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
+  const menuLinks = document.querySelectorAll('.navbar-nav .nav-link[href^="#"]');
+  const targets = [];
 
-  function setActiveMenu() {
-    let scrollPosition = window.scrollY + 160;
+  menuLinks.forEach(link => {
+    const id = link.getAttribute("href").substring(1);
+    const target = document.getElementById(id);
+    if (target) {
+      targets.push({
+        id: id,
+        link: link,
+        element: target
+      });
+    }
+  });
 
-    sections.forEach(section => {
-      const sectionTop = section.offsetTop;
-      const sectionHeight = section.offsetHeight;
-      const sectionId = section.getAttribute("id");
+  function onScroll() {
+    const scrollPos = window.scrollY + 200;
 
-      if (
-        scrollPosition >= sectionTop &&
-        scrollPosition < sectionTop + sectionHeight
-      ) {
-        navLinks.forEach(link => {
-          link.classList.remove("active");
-          if (link.getAttribute("href") === "#" + sectionId) {
-            link.classList.add("active");
-          }
-        });
+    targets.forEach(item => {
+      const top = item.element.offsetTop;
+      const height = item.element.offsetHeight;
+
+      if (scrollPos >= top && scrollPos < top + height) {
+        targets.forEach(i => i.link.classList.remove("active"));
+        item.link.classList.add("active");
       }
     });
   }
 
-  window.addEventListener("scroll", setActiveMenu);
+  window.addEventListener("scroll", onScroll);
 });

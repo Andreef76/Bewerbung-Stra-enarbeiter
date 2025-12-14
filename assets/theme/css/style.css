@@ -963,10 +963,13 @@ blockquote {
 	top: 0;
 	left: -2400px;
 }
+
 section.display-7 {
   display: none !important;
 }
-/* === Active menu item (ScrollSpy) === */
+
+
+
 .navbar-nav .nav-link {
   position: relative;
   transition: color 0.3s ease;
