@@ -1158,7 +1158,7 @@ a {
   }
 }
 .cid-v5iQ4t1JHs {
-  background-image: url("../../../assets/images/1-1280x853.webp");
+  background-image: linear-gradient(176deg, #1e2b3f 10%, #431f04 100%) !important;
 }
 .cid-v5iQ4t1JHs .mbr-fallback-image.disabled {
   display: none;
