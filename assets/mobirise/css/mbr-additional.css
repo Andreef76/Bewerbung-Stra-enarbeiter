@@ -12,7 +12,7 @@ img,
 .card,
 .item-wrapper,
 .item-wrapper .mbr-overlay {
-  border-radius: 2rem !important;
+  border-radius: 0 !important;
 }
 .video-wrapper {
   overflow: hidden;
