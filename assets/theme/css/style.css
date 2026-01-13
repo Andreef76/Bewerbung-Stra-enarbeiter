@@ -964,6 +964,12 @@ blockquote {
 	left: -2400px;
 }
 
+
+
+
+
+
+
 section.display-7 {
   display: none !important;
 }
@@ -983,18 +989,21 @@ section.display-7 {
   height: 2px;
   background-color: #ff6b00;
 }
+
+
+
+
+
 .item-wrapper {
   transition: all 0.25s ease;
   border: 2px solid transparent;
 }
-
 /* реагируют только подблоки, которые содержат ссылку */
 .item-wrapper:has(a):hover {
   transform: scale(1.03);
   border-color: #cfcfcf;
   background-color: rgba(0,0,0,0.04);
 }
-
 .item-wrapper:has(a):hover img {
   filter: brightness(0.9);
 }
