@@ -973,8 +973,50 @@ blockquote {
 section.display-7 {
   display: none !important;
 }
+/* ===== UNIVERSAL MOBIRISE INTERACTIVE EFFECTS ===== */
 
-/* Active menu item */
+/* плавность для всех кликабельных элементов */
+a, button {
+  transition: all 0.25s ease;
+}
+
+/* курсор-рука для всех ссылок */
+a {
+  cursor: pointer;
+}
+
+/* --- КНОПКИ --- */
+a.btn:hover {
+  transform: scale(1.05);
+  background-color: #ff6b00 !important;
+  border-color: #ff6b00 !important;
+  color: #fff !important;
+}
+
+/* --- ИКОНКИ --- */
+.mbr-iconfont {
+  transition: all 0.25s ease;
+}
+a:hover .mbr-iconfont {
+  transform: scale(1.15);
+  color: #ff6b00 !important;
+}
+
+/* --- КАРТИНКИ С ССЫЛКОЙ --- */
+a img {
+  transition: all 0.25s ease;
+}
+a:hover img {
+  transform: scale(1.03);
+  filter: brightness(0.9);
+}
+
+/* --- ТЕКСТОВЫЕ ССЫЛКИ --- */
+.navbar .nav-link:hover {
+  color: #ff6b00 !important;
+}
+
+/* --- АКТИВНЫЙ ПУНКТ МЕНЮ --- */
 .navbar .nav-link.active {
   color: #ff6b00 !important;
   position: relative;
@@ -990,20 +1032,25 @@ section.display-7 {
   background-color: #ff6b00;
 }
 
+/* ===== END ===== */
 
 
-
-
-.item-wrapper {
-  transition: all 0.25s ease;
-  border: 2px solid transparent;
+section.display-7 {
+  display: none !important;
 }
-/* реагируют только подблоки, которые содержат ссылку */
-.item-wrapper:has(a):hover {
-  transform: scale(1.03);
-  border-color: #cfcfcf;
-  background-color: rgba(0,0,0,0.04);
+
+/* Active menu item */
+.navbar .nav-link.active {
+  color: #ff6b00 !important;
+  position: relative;
 }
-.item-wrapper:has(a):hover img {
-  filter: brightness(0.9);
+
+.navbar .nav-link.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background-color: #ff6b00;
 }

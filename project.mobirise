@@ -277,10 +277,10 @@
         "url": "https://fonts.googleapis.com/css?family=Inter+Tight:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i"
       }
     ],
-    "favicon": "@PROJECT_PATH@/assets/images/1_1.svg",
+    "favicon": "@PROJECT_PATH@/assets/images/1-1.svg",
     "usedWebp": true,
     "imageResize": true,
-    "mbrsiteDomain": "dci99jxylj",
+    "mbrsiteDomain": "gys15i59ez",
     "robotsSwitcher": false,
     "sitemapSwitcher": false,
     "sitemapSwitcherAuto": false,
@@ -301,8 +301,9 @@
         "title": "Bewerbung",
         "meta_descr": "Bewerbungsunterlagen – Straßenunterhalt und -erhaltung",
         "header_custom": "",
-        "footer_custom": "",
-        "html_before": ""
+        "footer_custom": "<script data-goatcounter=\"https://andreef-bewerbung.goatcounter.com/count\" async src=\"//gc.zgo.at/count.js\"></script>",
+        "html_before": "",
+        "meta_image": "@PROJECT_PATH@/assets/images/2.svg"
       },
       "components": [
         {
